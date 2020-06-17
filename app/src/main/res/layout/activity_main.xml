@@ -29,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/text_pw"
                 android:hint="PASSWORD"
-                android:layout_weight="2"/>
+                android:layout_weight="2"
+                android:inputType="numberPassword"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                 android:id="@+id/login"
                 android:text="Login"
                 android:layout_weight="1"
-                android:onClick="loginClick"/>
+                android:onClick="loginClick" />
 
             <Button
                 android:layout_width="match_parent"
