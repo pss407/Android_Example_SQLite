@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="로그인 및 회원가입"
+            android:theme="@style/mainTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReadDBActivity"></activity>
+        <activity android:name=".ReadDBActivity"
+            android:label="DB 조회"
+            android:theme="@style/mainTheme"></activity>
     </application>
 
 </manifest>

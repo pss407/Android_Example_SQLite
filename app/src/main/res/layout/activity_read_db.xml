@@ -9,13 +9,15 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="ID"
-        android:id="@+id/id_layout"/>
+        android:id="@+id/id_layout"
+        android:layout_marginLeft="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="Password"
-        android:id="@+id/password_layout"/>
+        android:id="@+id/password_layout"
+        android:layout_marginRight="5dp"/>
 
 </LinearLayout>
