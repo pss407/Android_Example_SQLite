@@ -46,8 +46,17 @@ public class MainActivity extends AppCompatActivity {
         String ID = id.getText().toString();
         String PW = pw.getText().toString();
 
-        db = helper.getWritableDatabase();
-        db.execSQL("INSERT INTO tb_member(id, password) VALUES (?, ?);", new String[]{ID, PW});
+        db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT id FROM tb_member WHERE id = '"+ID+"';", null);
+
+        if(cursor.getCount()==0) {
+            db = helper.getWritableDatabase();
+            db.execSQL("INSERT INTO tb_member(id, password) VALUES (?, ?);", new String[]{ID, PW});
+            Toast.makeText(this, "회원가입에 성공했습니다.", Toast.LENGTH_LONG).show();
+        }
+        else
+            Toast.makeText(this, "이미 가입한 회원입니다.", Toast.LENGTH_LONG).show();
+        cursor.close();
         db.close();
     }
 
