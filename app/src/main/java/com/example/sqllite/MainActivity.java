@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         sign = (Button) findViewById(R.id.sign_in);
         select = (Button) findViewById(R.id.select);
         helper = new DBHelper(this, dbName, null, dbVersion);
-
     }
 
     public void signClick(View v) {
